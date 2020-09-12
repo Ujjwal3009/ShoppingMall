@@ -5,7 +5,12 @@ public class Signup {
     String createpwd;
     String confmpwd;
 
-    void enterSignUpDetails(){
+    /**
+     * SignUpDetails  is a method used for taking user details as an input.
+     */
+
+    String enterSignUpDetails()
+    {
          Scanner enterdetails = new Scanner(System.in);
          System.out.println("Your email id : ");
          email = enterdetails.nextLine();
@@ -15,38 +20,37 @@ public class Signup {
 
          confmpwd = enterdetails.nextLine();
 
-         if(confmpwd.equals(createpwd)){
+         if(confmpwd.equals(createpwd))
+         {
              System.out.println("==========Please Confirm your Details=============");
              System.out.println(email + "\n" + createpwd + "\n"+ confmpwd);
              confirm();
          }
-         else{
+         else
+             {
              System.out.println("Password Mismatch \n Please Re Enter the Details ");
              enterSignUpDetails();
          }
-
-
-
-
-
+         return (email + createpwd );
     }
-    void confirm(){
+    /**
+     * This is the confirm method to assure the details  filled by user is correct.
+     */
+    void confirm()
+    {
         System.out.println("================= Do you Want to edit or Confirm the Details  ================= \n 1. Confirm \n 2. Edit");
         Scanner confirmAsk = new Scanner(System.in);
         int ask = confirmAsk.nextInt();
-        switch (ask){
+        switch (ask)
+        {
             case 1:
-                System.out.println("Thanx for registering yourself");
+                System.out.println("Thank you for registering yourself");
                 break;
             case 2:
                 System.out.println("Please Edit your Details");
                 enterSignUpDetails();
         }
     }
-    public static void main(String[] args) {
 
-
-
-    }
 
 }

@@ -24,9 +24,14 @@
  */
 
 
+import java.time.LocalDate;
 import java.util.Scanner;
+/**
+ * HomePage class for Showing Homepage to user
+ */
 
 public class HomePage {
+
     String email;
     String password;
 
@@ -36,7 +41,12 @@ public class HomePage {
 
 
     }
+    /**
+     * LoginOptions is the method od HomePage Class to show the options of
+     * Signup and login to user.
+     */
     void loginOptions(){
+
         Scanner loginOption = new Scanner(System.in);
 
         System.out.println("1. Login\n2. Signup");
@@ -45,11 +55,15 @@ public class HomePage {
         switch (option){
             case 1:
                 System.out.println("===================== Enter Your Details ====================== ");
-                Signup signupDetails = new Signup();
-                signupDetails.enterSignUpDetails();
+                LogIn logindetails = new LogIn();
+                logindetails.loginDetailEnter();
+
                 break;
             case 2:
                 System.out.println("======================== Please register yourself ==============");
+                Signup signupDetails = new Signup();
+                signupDetails.enterSignUpDetails();
+
                 break;
             default:
                 System.out.println("=======================Please enter Some Value ==================");
