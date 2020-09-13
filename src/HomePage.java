@@ -34,13 +34,11 @@ public class HomePage {
 
     String email;
     String password;
-
-
-    void loginMessage(){
+    static{
         System.out.println("=====================Welcome To The Shopping Mall========================");
-
-
     }
+
+
     /**
      * LoginOptions is the method od HomePage Class to show the options of
      * Signup and login to user.
@@ -80,7 +78,7 @@ public class HomePage {
 
     public static void main(String[] args) {
         HomePage homeScreen = new HomePage();
-        homeScreen.loginMessage();
+//        homeScreen.loginMessage();
         homeScreen.loginOptions();
 
 

@@ -43,6 +43,8 @@ public class LogIn {
         if(email.equals("Ujjwal") && password.equals("Ujjwal3009@")){
 
            System.out.println("=============Welcome " + email + "=========================");
+           ShopMainPage redirectAfterlogin = new ShopMainPage();
+           redirectAfterlogin.shoppingOptions();
        }
         else {
             System.out.println("Wrong Credentials");
